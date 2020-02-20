@@ -29,6 +29,26 @@ namespace BloodBankManagementSystem
 
         private void panelOpositive_Paint(object sender, PaintEventArgs e)
         {
+            
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblOpositive_Click(object sender, EventArgs e)
+        {
 
         }
     }
