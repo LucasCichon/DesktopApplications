@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eContact", "eContact\eContact.csproj", "{2EDCAF10-3538-4255-9369-76260761C8BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodBankManagementSystem", "BloodBankManagementSystem\BloodBankManagementSystem.csproj", "{70633B81-49BD-4298-8F27-8C1528AF9638}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EDCAF10-3538-4255-9369-76260761C8BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EDCAF10-3538-4255-9369-76260761C8BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EDCAF10-3538-4255-9369-76260761C8BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EDCAF10-3538-4255-9369-76260761C8BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70633B81-49BD-4298-8F27-8C1528AF9638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70633B81-49BD-4298-8F27-8C1528AF9638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70633B81-49BD-4298-8F27-8C1528AF9638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70633B81-49BD-4298-8F27-8C1528AF9638}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6550006-D9F2-4F15-9275-01F9BD5B5C27}
+	EndGlobalSection
+EndGlobal
