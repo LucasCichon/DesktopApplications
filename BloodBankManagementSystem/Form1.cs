@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace BloodBankManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class frmHome : Form
     {
-        public Form1()
+        public frmHome()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelOpositive_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
