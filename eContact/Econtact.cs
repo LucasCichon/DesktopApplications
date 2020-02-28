@@ -146,5 +146,10 @@ namespace eContact
             sda.Fill(dt);
             dgvContactList.DataSource = dt;
         }
+
+        private void dgvContactList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -245,6 +245,7 @@
             this.dgvContactList.Name = "dgvContactList";
             this.dgvContactList.Size = new System.Drawing.Size(624, 263);
             this.dgvContactList.TabIndex = 17;
+            this.dgvContactList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactList_CellContentClick);
             this.dgvContactList.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvContactList_RowHeaderMouseClick);
             // 
             // lblSearch
