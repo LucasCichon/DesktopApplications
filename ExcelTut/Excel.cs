@@ -24,6 +24,8 @@ namespace ExcelTut
             ws = wb.Worksheets[Sheet];      //zmienna WorkSheet przyjmuje wartość konkretnego arkusza o numerze Sheet podanego podczas wywołania konstruktora
         }
 
+
+
         public string ReadCell(int i, int j) //metoda odczytująca dane z arkusza
         {
             i++;
