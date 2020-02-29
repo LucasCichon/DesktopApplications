@@ -35,7 +35,7 @@ namespace ExcelTut
             this.btnOpen = new System.Windows.Forms.Button();
             this.comboBoxSheet = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.identityUserDataSet = new ExcelTut.IdentityUserDataSet();
+            //this.identityUserDataSet = new ExcelTut.IdentityUserDataSet();
             this.identityUserDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.identityUserDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.excelApplicationDataSet = new ExcelTut.ExcelApplicationDataSet();
@@ -52,7 +52,7 @@ namespace ExcelTut
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonExportSQL = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.identityUserDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSet)).BeginInit();
@@ -116,18 +116,18 @@ namespace ExcelTut
             // 
             // identityUserDataSet
             // 
-            this.identityUserDataSet.DataSetName = "IdentityUserDataSet";
-            this.identityUserDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.identityUserDataSet.DataSetName = "IdentityUserDataSet";
+            //this.identityUserDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // identityUserDataSetBindingSource
             // 
-            this.identityUserDataSetBindingSource.DataSource = this.identityUserDataSet;
-            this.identityUserDataSetBindingSource.Position = 0;
+            //this.identityUserDataSetBindingSource.DataSource = this.identityUserDataSet;
+            //this.identityUserDataSetBindingSource.Position = 0;
             // 
             // identityUserDataSetBindingSource1
             // 
-            this.identityUserDataSetBindingSource1.DataSource = this.identityUserDataSet;
-            this.identityUserDataSetBindingSource1.Position = 0;
+            //this.identityUserDataSetBindingSource1.DataSource = this.identityUserDataSet;
+            //this.identityUserDataSetBindingSource1.Position = 0;
             // 
             // excelApplicationDataSet
             // 
@@ -217,7 +217,7 @@ namespace ExcelTut
             this.Text = "From Exel To Sql";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.identityUserDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSet)).EndInit();
@@ -238,7 +238,7 @@ namespace ExcelTut
         private ComboBox comboBoxSheet;
         private System.Windows.Forms.Label label1;
         private BindingSource identityUserDataSetBindingSource;
-        private IdentityUserDataSet identityUserDataSet;
+       // private IdentityUserDataSet identityUserDataSet;
         private BindingSource excelApplicationDataSetBindingSource;
         private ExcelApplicationDataSet excelApplicationDataSet;
         private BindingSource identityUserDataSetBindingSource1;

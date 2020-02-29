@@ -127,7 +127,8 @@ namespace ExcelTut
                     using(IDbConnection db = new SqlConnection(connString))
                     {
                         //  BulkInsert - An IDbConnection extension method to INSERT entities in a database table or a view.
-                        db.BulkInsert(customers);
+                        //db.BulkInsert(customers);
+                        db.BulkUpdate(customers);
                     }
                     MessageBox.Show("Finish !!!");
                 }

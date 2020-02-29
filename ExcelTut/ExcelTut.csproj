@@ -68,16 +68,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ExcelDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ExcelDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExcelDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IdentityUserDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IdentityUserDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,16 +115,16 @@
     <None Include="ExcelDataSet.xss">
       <DependentUpon>ExcelDataSet.xsd</DependentUpon>
     </None>
-    <None Include="IdentityUserDataSet.xsc">
-      <DependentUpon>IdentityUserDataSet.xsd</DependentUpon>
+    <None Include="ExcelDataSet11.xsc">
+      <DependentUpon>ExcelDataSet11.xsd</DependentUpon>
     </None>
-    <None Include="IdentityUserDataSet.xsd">
+    <None Include="ExcelDataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IdentityUserDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ExcelDataSet11.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="IdentityUserDataSet.xss">
-      <DependentUpon>IdentityUserDataSet.xsd</DependentUpon>
+    <None Include="ExcelDataSet11.xss">
+      <DependentUpon>ExcelDataSet11.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
