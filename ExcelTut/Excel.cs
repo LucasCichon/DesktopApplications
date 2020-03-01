@@ -14,6 +14,7 @@ namespace ExcelTut
         _Application excel = new _Excel.Application();
         Workbook wb;
         Worksheet ws;
+        public string ConnectionString;
 
         public Excel() { } //konstruktor bez parametrów
 

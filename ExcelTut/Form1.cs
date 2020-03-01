@@ -120,6 +120,9 @@ namespace ExcelTut
             try
             {
                 string connString = "Server=DESKTOP-EHCH26F\\SQLEXPRESS;Database=Excel;Trusted_Connection=True";
+                
+                
+
                 DapperPlusManager.Entity<Customer>().Table("Customers");
                 List<Customer>customers = customersBindingSource.DataSource as List<Customer>;
                 if (customers != null)
@@ -137,6 +140,12 @@ namespace ExcelTut
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnAdvanced_Click(object sender, EventArgs e)
+        {
+            FormAdvanced f = new FormAdvanced();
+            f.Show();
         }
     }
 }

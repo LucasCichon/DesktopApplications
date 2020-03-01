@@ -31,11 +31,16 @@ namespace ExcelTut
         {
             this.components = new System.ComponentModel.Container();
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.excelDataSet = new ExcelTut.ExcelDataSet();
             this.TextBox_Path = new System.Windows.Forms.TextBox();
             this.btnOpen = new System.Windows.Forms.Button();
             this.comboBoxSheet = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            //this.identityUserDataSet = new ExcelTut.IdentityUserDataSet();
             this.identityUserDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.identityUserDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.excelApplicationDataSet = new ExcelTut.ExcelApplicationDataSet();
@@ -43,16 +48,12 @@ namespace ExcelTut
             this.excelApplicationDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.excelApplicationDataSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.excelApplicationDataSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.excelDataSet = new ExcelTut.ExcelDataSet();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new ExcelTut.ExcelDataSetTableAdapters.CustomersTableAdapter();
-            this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonExportSQL = new System.Windows.Forms.Button();
+            this.btnAdvanced = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.identityUserDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSet)).BeginInit();
@@ -60,8 +61,6 @@ namespace ExcelTut
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSetBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSetBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvList
@@ -78,6 +77,40 @@ namespace ExcelTut
             this.dgvList.Name = "dgvList";
             this.dgvList.Size = new System.Drawing.Size(861, 458);
             this.dgvList.TabIndex = 0;
+            // 
+            // customerIDDataGridViewTextBoxColumn
+            // 
+            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID";
+            this.customerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID";
+            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "Customers";
+            this.customersBindingSource.DataSource = this.excelDataSet;
+            // 
+            // excelDataSet
+            // 
+            this.excelDataSet.DataSetName = "ExcelDataSet";
+            this.excelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TextBox_Path
             // 
@@ -114,21 +147,6 @@ namespace ExcelTut
             this.label1.TabIndex = 6;
             this.label1.Text = "Sheet";
             // 
-            // identityUserDataSet
-            // 
-            //this.identityUserDataSet.DataSetName = "IdentityUserDataSet";
-            //this.identityUserDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // identityUserDataSetBindingSource
-            // 
-            //this.identityUserDataSetBindingSource.DataSource = this.identityUserDataSet;
-            //this.identityUserDataSetBindingSource.Position = 0;
-            // 
-            // identityUserDataSetBindingSource1
-            // 
-            //this.identityUserDataSetBindingSource1.DataSource = this.identityUserDataSet;
-            //this.identityUserDataSetBindingSource1.Position = 0;
-            // 
             // excelApplicationDataSet
             // 
             this.excelApplicationDataSet.DataSetName = "ExcelApplicationDataSet";
@@ -154,43 +172,9 @@ namespace ExcelTut
             this.excelApplicationDataSetBindingSource3.DataSource = this.excelApplicationDataSet;
             this.excelApplicationDataSetBindingSource3.Position = 0;
             // 
-            // excelDataSet
-            // 
-            this.excelDataSet.DataSetName = "ExcelDataSet";
-            this.excelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataMember = "Customers";
-            this.customersBindingSource.DataSource = this.excelDataSet;
-            // 
             // customersTableAdapter
             // 
             this.customersTableAdapter.ClearBeforeFill = true;
-            // 
-            // customerIDDataGridViewTextBoxColumn
-            // 
-            this.customerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID";
-            this.customerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID";
-            this.customerIDDataGridViewTextBoxColumn.Name = "customerIDDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
             // 
             // buttonExportSQL
             // 
@@ -202,10 +186,21 @@ namespace ExcelTut
             this.buttonExportSQL.UseVisualStyleBackColor = true;
             this.buttonExportSQL.Click += new System.EventHandler(this.buttonExportSQL_Click);
             // 
+            // btnAdvanced
+            // 
+            this.btnAdvanced.Location = new System.Drawing.Point(754, 75);
+            this.btnAdvanced.Name = "btnAdvanced";
+            this.btnAdvanced.Size = new System.Drawing.Size(132, 23);
+            this.btnAdvanced.TabIndex = 8;
+            this.btnAdvanced.Text = "Advanced";
+            this.btnAdvanced.UseVisualStyleBackColor = true;
+            this.btnAdvanced.Click += new System.EventHandler(this.btnAdvanced_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(898, 603);
+            this.Controls.Add(this.btnAdvanced);
             this.Controls.Add(this.buttonExportSQL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxSheet);
@@ -217,7 +212,8 @@ namespace ExcelTut
             this.Text = "From Exel To Sql";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.identityUserDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.excelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.identityUserDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSet)).EndInit();
@@ -225,8 +221,6 @@ namespace ExcelTut
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelApplicationDataSetBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.excelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,6 +247,7 @@ namespace ExcelTut
         private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonExportSQL;
+        private System.Windows.Forms.Button btnAdvanced;
 
         //#endregion
     }
